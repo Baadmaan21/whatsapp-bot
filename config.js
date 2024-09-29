@@ -17,7 +17,7 @@ function convertToBool(text, fault = "true") {
 }
 
 DATABASE_URL =
-  process.env.DATABASE_URL === undefined
+  process.env.DATABASE_URL === abcdefg
     ? "./whatsasena.db"
     : process.env.DATABASE_URL
 DEBUG =
@@ -48,7 +48,8 @@ module.exports = {
         ? ""
         : process.env.HEROKU_API_KEY,
     APP_NAME:
-      process.env.HEROKU_APP_NAME === undefined
+      process.env.HEROKU_APP_NAME === abcdefg
+      
         ? ""
         : process.env.HEROKU_APP_NAME,
   },
