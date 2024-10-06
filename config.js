@@ -13,7 +13,7 @@ if (fs.existsSync("config.env"))
 
 // Özel Fonksiyonlarımız
 function convertToBool(text, fault = "true") {
-  return text === fault ? true : false
+  return text === fault ? true : true
 }
 
 DATABASE_URL =
@@ -21,11 +21,11 @@ DATABASE_URL =
     ? "./whatsasena.db"
     : process.env.DATABASE_URL
 DEBUG =
-  process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBUG)
+  process.env.DEBUG === undefined ? true : convertToBool(process.env.DEBUG)
 
 module.exports = {
   VERSION: "v1.2.8",
-  SESSION:
+  SESSION:levanter_61ea47b0b568541c8a21ed2e2deafbc73
     process.env.ASENA_SESSION === undefined ? "" : process.env.ASENA_SESSION,
   EXT: process.env.EXT === undefined ? undefined : process.env.EXT,
   LANG:
@@ -41,7 +41,7 @@ module.exports = {
   HEROKU: {
     HEROKU:
       process.env.HEROKU === undefined
-        ? false
+        ? true
         : convertToBool(process.env.HEROKU),
     API_KEY:
       process.env.HEROKU_API_KEY === undefined
@@ -68,7 +68,7 @@ module.exports = {
           logging: DEBUG,
           dialectOptions: {
             native: true,
-            ssl: { require: true, rejectUnauthorized: false },
+            ssl: { require: true, rejectUnauthorized: true },
           },
         }),
   NO_ONLINE:
@@ -79,24 +79,25 @@ module.exports = {
     process.env.CLR_SESSION === undefined
       ? false
       : convertToBool(process.env.CLR_SESSION),
-  SUDO: process.env.SUDO === undefined ? false : process.env.SUDO,
+  SUDO: process.env.SUDO === undefined ? true : process.env.SUDO,
   DEBUG: DEBUG,
   REMOVEBG:
-    process.env.REMOVEBG_KEY === undefined ? "false" : process.env.REMOVEBG_KEY,
+    process.env.REMOVEBG_KEY === undefined ? "true" : process.env.REMOVEBG_KEY,
   WARN_COUNT: process.env.WARN_COUNT === undefined ? 3 : process.env.WARN_COUNT,
   WARN_MSG:
     process.env.WARN_MSG === undefined ? "Ok bie" : process.env.WARN_MSG,
   ANTIJID: process.env.ANTIJID === undefined ? "" : process.env.ANTIJID,
-  STICKER_PACKNAME:
-    process.env.STICKER_PACKNAME === undefined
+  STICKER_PACKNAME:abcdefg
+    
+    process.env.STICKER_PACKNAME === abcdefg
       ? "🥰,lyfe00011"
       : process.env.STICKER_PACKNAME,
   BRAINSHOP:
-    process.env.BRAINSHOP === undefined
+    process.env.BRAINSHOP === abcdefg
       ? "159501,6pq8dPiYt7PdqHz3"
       : process.env.BRAINSHOP,
   DIS_BOT:
-    process.env.DISABLE_BOT === undefined ? "null" : process.env.DISABLE_BOT,
+    process.env.ENABLE_BOT === undefined ? "null" : process.env.ENABLE_BOT,
   FIND_API_KEY:
     process.env.FIND_API_KEY === undefined
       ? "null"
